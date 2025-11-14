@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie Blog</title>
+  
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- ✅ Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">🍴 Foodie Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Hero Section -->
+<header class="text-center text-light d-flex align-items-center justify-content-center" style="background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center/cover; height: 60vh;">
+  <div class="bg-dark bg-opacity-50 p-4 rounded">
+    <h1 class="display-3 fw-bold">Welcome to Foodie Paradise</h1>
+    <p class="lead">Delicious recipes & food blogs for every taste</p>
+    <a href="#blogs" class="btn btn-warning btn-lg">Explore Blogs</a>
+  </div>
+</header>
+
+<!-- ✅ Search Bar -->
+<div class="container my-4">
+  <input type="text" id="searchBar" class="form-control" placeholder="Search for food...">
+</div>
+
+<!-- ✅ Blog Section -->
+<section class="container py-5" id="blogs">
+  <h2 class="text-center mb-4">Our Latest Food Blogs</h2>
+  <div class="row g-4" id="foodContainer">
+    <!-- ✅ Cards will be added dynamically via JS -->
+  </div>
+</section>
+
+<!-- ✅ About Section -->
+<section class="container py-5" id="about">
+  <h2 class="text-center mb-4">About Us</h2>
+  <p class="text-center">Foodie Blog brings you the best of North Indian, South Indian, and International recipes. Discover flavors, traditions, and stories behind your favorite dishes!</p>
+</section>
+
+<!-- ✅ Contact Section -->
+<section class="container py-5" id="contact">
+  <h2 class="text-center mb-4">Contact Us</h2>
+  <form class="mx-auto" style="max-width: 500px;">
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" placeholder="Your Email" required>
+    </div>
+    <div class="mb-3">
+      <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark w-100">Send Message</button>
+  </form>
+</section>
+
+<!-- ✅ Footer -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <p class="mb-0">&copy; 2025 Foodie Blog. All Rights Reserved.</p>
+</footer>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recipeModalLabel">Recipe Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="recipeImg" class="img-fluid rounded mb-3" alt="Recipe Image">
+        <h3 id="recipeTitle"></h3>
+        <p id="recipeDesc"></p>
+        <h5>Ingredients:</h5>
+        <ul id="recipeIngredients"></ul>
+        <h5>Steps:</h5>
+        <ol id="recipeSteps"></ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ✅ Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>

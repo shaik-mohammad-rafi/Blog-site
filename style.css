@@ -1,0 +1,22 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-warning {
+  background-color: #ff9800;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e68a00;
+}
